@@ -1,6 +1,6 @@
 # Jokes Fetcher App
 
-A Flutter application that fetches jokes from an API and caches them for offline access. This ensures the user can enjoy jokes even when disconnected from the internet.
+A Flutter application designed to fetch jokes from an API and store them locally, allowing users to enjoy their favorite jokes seamlessly, even without an internet connection.
 
 ## Features
 
@@ -11,7 +11,7 @@ A Flutter application that fetches jokes from an API and caches them for offline
 
 ## Screenshots
 
-(Add screenshots here if available)
+
 
 ## Getting Started
 
