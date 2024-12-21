@@ -1,4 +1,4 @@
-# Jokes Fetcher App
+# Jokes App
 
 A Flutter application designed to fetch jokes from an API and store them locally, allowing users to enjoy their favorite jokes seamlessly, even without an internet connection.
 
