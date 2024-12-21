@@ -114,4 +114,3 @@ Contributions are welcome! Follow these steps to contribute:
 - **Developer**: Navindu Chathuranga
 - **Email**: spynavindu@gmail.com
 
-Feel free to reach out for support, feedback, or collaboration!
