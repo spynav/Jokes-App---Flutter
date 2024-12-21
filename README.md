@@ -28,8 +28,8 @@ Ensure you have the following installed on your system:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/jokes-fetcher-app.git
-   cd jokes-fetcher-app
+   git clone https://github.com/spynav/jokes-app.git
+   cd jokes-app
    ```
 
 2. Install dependencies:
@@ -81,7 +81,7 @@ lib/
 │   └── joke.dart           # Joke data model
 ├── screens/
 │   ├── home.dart # Main screen displaying jokes
-│   └── loading_page.dart  # Splash screen
+│   └── loading_page.dart  # Loading screen
 ├── services/
 │   └── connectivion_service.dart # Handles network connectivity
 ├── widgets/
