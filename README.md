@@ -76,17 +76,16 @@ The app uses the following API to fetch jokes:
 ```plaintext
 lib/
 ├── assets/
-│   ├── app_icon.png        # Application icon
 │   └── loading_icon.png    # Loading indicator
 ├── models/
 │   └── joke.dart           # Joke data model
 ├── screens/
-│   ├── jokes_home_page.dart # Main screen displaying jokes
-│   └── splash_screen.dart  # Splash screen
+│   ├── home.dart # Main screen displaying jokes
+│   └── loading_page.dart  # Splash screen
 ├── services/
-│   └── connectivity_service.dart # Handles network connectivity
+│   └── connectivion_service.dart # Handles network connectivity
 ├── widgets/
-│   └── joke_list_item.dart # Reusable widget for joke items
+│   └── joke_card.dart # Reusable widget for joke items
 └── main.dart               # Entry point of the app
 ```
 
