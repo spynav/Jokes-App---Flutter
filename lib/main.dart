@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/jokes_home_page.dart';
+import 'screens/home.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

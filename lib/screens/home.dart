@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import '../models/joke.dart';
-import '../services/connectivity_service.dart';
-import '../widgets/joke_list_item.dart';
+import '../services/connection_service.dart';
+import '../widgets/joke_card.dart';
 
 class JokesHomePage extends StatefulWidget {
   const JokesHomePage({super.key});
@@ -13,7 +13,6 @@ class JokesHomePage extends StatefulWidget {
 }
 
 class _JokesHomePageState extends State<JokesHomePage> {
-  final TextEditingController _searchController = TextEditingController();
   List<Joke> jokes = [];
   List<Joke> filteredJokes = [];
   bool isLoading = false;
@@ -89,21 +88,12 @@ class _JokesHomePageState extends State<JokesHomePage> {
     }
   }
 
-  void _filterJokes(String query) {
-    setState(() {
-      filteredJokes = jokes
-          .where((joke) =>
-          joke.fullJoke.toLowerCase().contains(query.toLowerCase()))
-          .toList();
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Jokes'),
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Colors.black26,
         actions: [
           if (isOffline)
             const Padding(
@@ -131,23 +121,6 @@ class _JokesHomePageState extends State<JokesHomePage> {
                 ],
               ),
             ),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: TextField(
-              controller: _searchController,
-              decoration: InputDecoration(
-                labelText: 'Search Jokes',
-                hintText: 'Enter keywords...',
-                prefixIcon: const Icon(Icons.search),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                filled: true,
-                fillColor: Colors.grey[100],
-              ),
-              onChanged: _filterJokes,
-            ),
-          ),
           Expanded(
             child: isLoading
                 ? const Center(child: CircularProgressIndicator())
@@ -187,11 +160,5 @@ class _JokesHomePageState extends State<JokesHomePage> {
         ],
       ),
     );
-  }
-
-  @override
-  void dispose() {
-    _searchController.dispose();
-    super.dispose();
   }
 }
